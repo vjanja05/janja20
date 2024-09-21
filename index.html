@@ -3,82 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chancheq</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Dashboard - Entry System</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesk.css">
 </head>
 <body>
-    <div class="container">
+    <div class="dashboard-container">
+        <header>
+            <h1>Data Entry Dashboard</h1>
+        </header>
 
-        <!-- Registration Form -->
-        <div id="registrationForm" class="container" >
-            <h1 class="form-title">Register here</h1>
-            <form method="post" action="home.html">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="" id="username" name="username" required>
-                    <label for="username">Username <span class="required"></span></label>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="" id="email" name="email" required>
-                    <label for="email">Email <span class="required"></span></label>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="" id="referralCode" name="referralCode">
-                    <label for="referralCode">Referral Code</label>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="" id="password" name="password" required>
-                    <label for="password">Password <span class="required"></span></label>
-                </div>
-                <button type="submit" action="home.html" class="btn" value="Sign Up">Sign Up</button>
-            </form>
-            <p class="or">
-                ---------or----------
-            </p>
-            <div class="icon">
-                <i class="fab fa-google"></i>
-                <i class="fab fa-facebook"></i>
-            </div>
-            <div class="link">
-                <p>Already have an acount ?</p>
-                <button id="signInButton">Login</button>
-            </div>
+        <div class="menu">
+            <a id="showall" style="display: none;">All</a>
+            <a id="zog" class="single" target="1">Kalo</a>
+            <a id="zog" class="single" target="2">Kanji</a>
+            <a id="zog" class="single" target="3">Kana</a>
+            <a id="zog" class="single" target="4">Kendi</a>
+            <a id="zog" class="single" target="5">Hako</a>
+            <a id="zog" class="single" target="6">Janji</a>
         </div>
+
+        <section id="target_box" style="display:table-header-group;">
+            <!-- Kalo Form -->
+            <div id="div1" class="target">
+                <h2>Kalo Table Entry</h2>
+                <form action="/submit_kalo" method="POST">
+                    <label for="kalo-field1">Field 1:</label>
+                    <input type="text" id="kalo-field1" name="field1" required>
+                    <label for="kalo-field2">Field 2:</label>
+                    <input type="text" id="kalo-field2" name="field2" required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <!-- Kanji Form -->
+            <div id="div2" class="target">
+                <h2>Kanji Table Entry</h2>
+                <form action="/submit_kanji" method="POST">
+                    <label for="kanji-field1">Field 1:</label>
+                    <input type="text" id="kanji-field1" name="field1" required>
+                    <label for="kanji-field2">Field 2:</label>
+                    <input type="text" id="kanji-field2" name="field2" required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="div3" class="target">
+                <h2>Kana Table Entry</h2>
+                <form action="/submit_kana" method="POST">
+                    <label for="kana-field1">Field 1:</label>
+                    <input type="text" id="kana-field1" name="field1" required>
+                    <label for="kana-field2">Field 2:</label>
+                    <input type="text" id="kana-field2" name="field2" required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="div4" class="target">
+                <h2>Kendi Table Entry</h2>
+                <form action="/submit_kendi" method="POST">
+                    <label for="kendi-field1">Field 1:</label>
+                    <input type="text" id="kendi-field1" name="field1" required>
+                    <label for="kendi-field2">Field 2:</label>
+                    <input type="text" id="kendi-field2" name="field2" required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="div5" class="target">
+                <h2>Hako Table Entry</h2>
+                <form action="/submit_hako" method="POST">
+                    <label for="hako-field1">Field 1:</label>
+                    <input type="text" id="hako-field1" name="field1" required>
+                    <label for="hako-field2">Field 2:</label>
+                    <input type="text" id="hako-field2" name="field2" required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="div6" class="target">
+                <h2>Janji Table Entry</h2>
+                <form action="/submit_janji" method="POST">
+                    <label for="janji-field1">Field 1:</label>
+                    <input type="text" id="janji-field1" name="field1" required>
+                    <label for="janji-field2">Field 2:</label>
+                    <input type="text" id="janji-field2" name="field2" required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
     </div>
-<!--Login form-->
-    <div id="loginForm" class="container" >
-        <h2 class="form-title">Login</h2>
-        <form method="post" action="">
-            <div class="input-group">
-                <i class="fas fa-envelope"></i><input type="text" placeholder="" id="loginEmail" name="loginEmail" required>
-                <label for="loginEmail">Email</label>
-            </div>
-            <div class="input-group">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="" id="loginPassword" name="loginPassword" required>
-                <label for="loginPassword">Password</label>
-            </div>
-            <p class="recover">
-                <a href="#"> Recover password</a>
-            </p>
-                <button type="submit" id="signIn" class="btn" value="Log In">LogIn</button>
-        </form>
-        <p class="or">
-            ---------or----------
-        </p>
-        <div class="icon">
-            <i class="fab fa-google"></i>
-            <i class="fab fa-facebook"></i>
-        </div>
-        <div class="link">
-            <p>Don't have an account?</p>
-            <button id="registrationbutton" >Register</button>
-        </div>
-    </div>
-    <script  src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
