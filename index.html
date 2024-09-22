@@ -9,50 +9,79 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <header>
-            <h1>Data Entry Dashboard</h1>
+        <header class="head">
+            <p >Main Business Dashboard</p>
+            <div class="logo">
+                <img src="logo.jpg" alt="logo">
+            </div>
         </header>
 
         <div class="menu">
             <a id="showall" style="display: none;">All</a>
-            <a id="zog" class="single" target="1">Kalo</a>
-            <a id="zog" class="single" target="2">Kanji</a>
-            <a id="zog" class="single" target="3">Kana</a>
-            <a id="zog" class="single" target="4">Kendi</a>
-            <a id="zog" class="single" target="5">Hako</a>
-            <a id="zog" class="single" target="6">Janji</a>
+            <a id="zog" class="single" target="1">Shop Data entry</a>
+            <a id="zog" class="single" target="2">Expences and purchases from shop</a>
+            <a id="zog" class="single" target="3">workers bio submition</a>
+            <a id="zog" class="single" target="4">Logistics data system</a>
+            <a id="zog" class="single" target="5">Assets usage data</a>
+            <a id="zog" class="single" target="6">relavant documents</a>
         </div>
 
-        <section id="target_box" style="display:table-header-group;">
+        <section id="target_box" class="container">
             <!-- Kalo Form -->
             <div id="div1" class="target">
-                <h2>Kalo Table Entry</h2>
-                <form action="https://formspree.io/f/xjkbqrja" method="POST">
-  <input type="email" name="email" placeholder="Your email">
-  <textarea name="message" placeholder="your name"></textarea>
-  <button type="submit">Submit</button>
-</form>
+                <h2>Shop Data Entry</h2>
 
+                <form action="https://formspree.io/f/xjkbqrja" method="POST">
+                <label for="worker_id">Worker ID:</label>
+                <input type="number" id="worker_id" name="worker_id" placeholder="worker id" required><br>
+
+                <label for="item" >Item:</label>
+                <input type="text" name="item" placeholder="item" required><br>
+                <label for="marker" >Marker:</label>
+                <input type="text" id="marker" name="marker" placeholder="marker" required><br>
+                <label for="product_id" >Product id:</label>
+                <input type="number" id="product_id" name="product_id" placeholder="product id" required><br>
+
+                <label for="product_sold" >Product sold:</label>
+                <input type="number" id="product_sold" name="product_sold" placeholder="number of products sold" required><br>
+
+                <label for="value_per_product" >Value per product:</label>
+                <input type="number" id="value_per_product" name="value_per_product" placeholder="cost of one product" required><br>
+            
+                <input type="submit" value="Submit">
+                </form>
             </div>
 
-            <!-- Kanji Form -->
+            <!-- expense Form -->
             <div id="div2" class="target">
-                <h2>Kanji Table Entry</h2>
+                <h2>Expences and purchases from shop</h2>
                 <form action="https://formspree.io/f/xjkbqrja" method="POST">
-                    <label for="kanji-field1">Field 1:</label>
-                    <input type="text" id="kanji-field1" name="field1" required>
-                    <label for="kanji-field2">Field 2:</label>
-                    <input type="text" id="kanji-field2" name="field2" required>
+                    <label for="type of Expences">Expenses:</label>
+                    <input type="text" id="Expense" name="Expense" placeholder="type of Expense" required>
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" placeholder="type of Expense" required>
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Amount" required>
+                    <label for="purchased_item">purchased item:</label>
+                    <input type="text" id="purchased_item" name="purchased_item" placeholder="description to purchase" required>
+                    <label for="units">Purchased units:</label>
+                    <input type="number" id="units" name="units" placeholder="number of purchased items" required>
+                    <label for="price_per_unit">Price per unit:</label>
+                    <input type="number" id="price_per_unit" name="price_per_unit" placeholder="price per unit" required>
+                    
                     <input type="submit" value="Submit">
                 </form>
             </div>
             <div id="div3" class="target">
-                <h2>Kana Table Entry</h2>
+                <h2>workers bio submition</h2>
                 <form action="https://formspree.io/f/xjkbqrja" method="POST">
-                    <label for="kana-field1">Field 1:</label>
-                    <input type="text" id="kana-field1" name="field1" required>
-                    <label for="kana-field2">Field 2:</label>
-                    <input type="text" id="kana-field2" name="field2" required>
+                    <label for="worker_id">Worker id:</label>
+                    <input type="number" id="worker_id" name="worker_id" placeholder="worker id" required>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="Gender">Gender:</label>
+                    <input type="Gender" id="Gender" name="Gender" placeholder="Gender" required>
+
                     <input type="submit" value="Submit">
                 </form>
             </div>
@@ -67,7 +96,7 @@
                 </form>
             </div>
             <div id="div5" class="target">
-                <h2>Hako Table Entry</h2>
+                <h2>Hako Table Entry </h2>
                 <form action="https://formspree.io/f/xjkbqrja" method="POST">
                     <label for="hako-field1">Field 1:</label>
                     <input type="text" id="hako-field1" name="field1" required>
