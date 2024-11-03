@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;   
+    align-content: center;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8; /* Optional background color for header */
+    text-align: center;
+}
+
+.header-img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjustable maximum height */
+    min-height: 25px;
+}
+
+/* Main content */
+main {
+    padding-top: 180px; /* Space to prevent content from overlapping with fixed header */
+    padding-bottom: 50px; /* Space for footer */
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8; /* Optional background color for footer */
+    text-align: center;
+}
+
+.footer-img {
+    width: 100%;
+    height: auto;
+    max-height: 100px; /* Adjustable maximum height */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .header-img, .footer-img {
+        max-height: 100px; /* Reduce the max height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-img, .footer-img {
+        max-height: 80px; /* Further reduce the max height for very small screens */
+    }
+}
+
+
+
+.heading{
+    background: #fff;
+    text-align: center;
+}
+
+.betstatus{
+    background-color: #fff;
+}
+
+.head-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex;
+    padding: 15px;
+    background-color: #fff;
+    max-width: 100%;
+}
+
+.back-button {
+    margin-right: 10px;
+}
+
+.back-arrow {
+    text-decoration: none;
+    font-size: 24px;
+    color: #000;
+}
+
+.bet-id {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+/*** payout ***/
+
+.payout-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 10px;
+    border: 15px solid whitesmoke;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.payout-info {
+    font-size: 14px;
+    color: #333;
+}
+
+.payout-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.payout-row .label {
+    color: #000;
+}
+
+.payout-row .value {
+    font-weight: bold;
+    color: #000;
+}
+
+.payout-row .currency {
+    font-size: 12px;
+    color: #666;
+}
+
+.payout-result .value {
+    color: #8BC34A; /* Green for "WON" text */
+    font-weight: bold;
+}
+
+.payout-result .currency{
+    color: #8BC34A;
+}
+
+.payout-result .label{
+    font-weight: bold;
+}
+
+/* math details */
+
+.match-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5px;
+    border-bottom: 2px #0e0e0e; solid;
+    font-size: 8px;
+}
+
+.left-section {
+    flex-basis: 70%;
+}
+
+.match-time {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.teams-info p {
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.teams-info small {
+    color: gray;
+    font-size: 12px;
+}
+
+.right-section {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.betting-details {
+    display: flex;
+    align-items: center;
+}
+
+.odd-value {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8BC34A;
+    margin-right: 5px;
+}
+
+.green-square {
+    background-color: #8BC34A;
+    width: 18px;
+    height: 18px;
+}
+
+.score {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+
+/* Bet Status Section */
+.bet-status {
+    margin: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.bet-date {
+    font-size: 14px;
+    color: #333;
+}
+
+.statuses {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+}
+
+.status .square {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    margin-right: 5px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: none;
+}
+
+.status.pending .square {
+    background-color: #e0e0e0;
+}
+
+.status.won .square {
+    background-color: #8BC34A; /* Green color */
+}
+
+.status.lost .square {
+    background-color: #D9534F; /* Red color */
+}
+
+.status.void .square {
+    background-color: #d3d3d3; /* Grey color for void */
+    color: #667;
+    font-size: 27px;
+    line-height: 0.3; /* Centers the cross symbol */
+}
+
+
+/* Terms Section */
+.terms-section {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #666;
+    padding-bottom: 50px;
+    font-style: italic;
+}
+
+.terms-section p {
+    line-height: 1.5;
+    text-align: center;
+}
+
+.terms-section a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.terms-section a:hover {
+    text-decoration: underline;
+}
+
+/* My Bets Button */
+.my-bets {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    text-align: center;
+    border-top: 1px solid #333; /* Add a border line above the button */
+}
+
+.my-bets button {
+    padding: 10px 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.my-bets button:hover {
+    background-color: #000;
+}
+
+
+/* */
+.bonus-bar {
+    background-color: #b7ec00;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.bonus-bar strong {
+    font-weight: bold;
+}
+
