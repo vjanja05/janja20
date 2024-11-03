@@ -3,121 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Entry System</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="stylesk.css">
-</head>
+    <title>Bet Slip</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <body>
-    <div class="dashboard-container">
-        <header class="head">
-            <p >Main Business Dashboard</p>
-            <div class="logo">
-                <img src="logo.jpg" alt="logo">
+    </head>
+   <header class="header">
+        <img src="header.png" alt="Header Image" class="header-img">
+   </header>
+   <main>
+        <div class="heading">
+            <div class="head-container">
+                <div class="back-button">
+                    <a href="#" class="back-arrow">&lt;</a>
+                </div>
+                <div class="bet-id">
+                    <p>BET ID #4933633859</p>
+                </div>
             </div>
-        </header>
-
-        <div class="menu">
-            <a id="showall" style="display: none;">All</a>
-            <a id="zog" class="single" target="1">Shop Data entry</a>
-            <a id="zog" class="single" target="2">Expences and purchases from shop</a>
-            <a id="zog" class="single" target="3">workers bio submition</a>
-            <a id="zog" class="single" target="4">Logistics data system</a>
-            <a id="zog" class="single" target="5">Assets usage data</a>
-            <a id="zog" class="single" target="6">relavant documents</a>
+        </div>
+        <div class="payout">
+            <div class="payout-container">
+            <div class="payout-info">
+            <div class="payout-row">
+                <span class="label">Odds:</span>
+                <span class="value">12.58</span>
+            </div>
+            <div class="payout-row">
+                <span class="label">Stake:</span>
+                <span class="value">50,000.00 <span class="currency">RWF</span></span>
+            </div>
+            <div class="payout-row">
+                <span class="label">Potential Winnings:</span>
+                <span class="value">589,350.00 <span class="currency">RWF</span></span>
+            </div>
+            <div class="payout-row payout-result">
+                <span class="label">Payout:</span>
+                <span class="value won">WON 629,350.00 <span class="currency">RWF</span></span>
+            </div>
+            </div>
+            </div>
         </div>
 
-        <section id="target_box" class="container">
-            <!-- Kalo Form -->
-            <div id="div1" class="target">
-                <h2>Shop Data Entry</h2>
-
-                <form action="https://formspree.io/f/xjkbqrja" method="POST">
-                <label for="worker_id">Worker ID:</label>
-                <input type="number" id="worker_id" name="worker_id" placeholder="worker id" required><br>
-
-                <label for="item" >Item:</label>
-                <input type="text" name="item" placeholder="item" required><br>
-                <label for="marker" >Marker:</label>
-                <input type="text" id="marker" name="marker" placeholder="marker" required><br>
-                <label for="product_id" >Product id:</label>
-                <input type="number" id="product_id" name="product_id" placeholder="product id" required><br>
-
-                <label for="product_sold" >Product sold:</label>
-                <input type="number" id="product_sold" name="product_sold" placeholder="number of products sold" required><br>
-
-                <label for="value_per_product" >Value per product:</label>
-                <input type="number" id="value_per_product" name="value_per_product" placeholder="cost of one product" required><br>
-            
-                <input type="submit" value="Submit">
-                </form>
+        <!-- Match Details Section -->
+        <div class="match-info">    
+            <div class="left-section">    
+            <div class="match-time">
+                9:30 pm <strong>Fri 01/11</strong>
+            </div>
+            <div class="teams-info">
+                <p>Balzan FC - Hibernians FC Paola</p>
+                <small>Premier League</small>
+                <p><strong>1X2 | Full Time (2)</strong></p>
+            </div>
             </div>
 
-            <!-- expense Form -->
-            <div id="div2" class="target">
-                <h2>Expences and purchases from shop</h2>
-                <form action="https://formspree.io/f/xjkbqrja" method="POST">
-                    <label for="type of Expences">Expenses:</label>
-                    <input type="text" id="Expense" name="Expense" placeholder="type of Expense" required>
-                    <label for="description">Description:</label>
-                    <input type="text" id="description" name="description" placeholder="type of Expense" required>
-                    <label for="amount">Amount:</label>
-                    <input type="number" id="amount" name="amount" placeholder="Amount" required>
-                    <label for="purchased_item">purchased item:</label>
-                    <input type="text" id="purchased_item" name="purchased_item" placeholder="description to purchase" required>
-                    <label for="units">Purchased units:</label>
-                    <input type="number" id="units" name="units" placeholder="number of purchased items" required>
-                    <label for="price_per_unit">Price per unit:</label>
-                    <input type="number" id="price_per_unit" name="price_per_unit" placeholder="price per unit" required>
-                    
-                    <input type="submit" value="Submit">
-                </form>
+            <div class="right-section">    
+            <div class="betting-details">
+                <span class="odd-value">4.10</span>
+                <div class="green-square"></div>
             </div>
-            <div id="div3" class="target">
-                <h2>workers bio submition</h2>
-                <form action="https://formspree.io/f/xjkbqrja" method="POST">
-                    <label for="worker_id">Worker id:</label>
-                    <input type="number" id="worker_id" name="worker_id" placeholder="worker id" required>
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="Gender">Gender:</label>
-                    <input type="Gender" id="Gender" name="Gender" placeholder="Gender" required>
+            <p class="score">0-1</p>
+            </div>
+        </div>
+        <div class="match-info">    
+            <div class="left-section">    
+            <div class="match-time">
+                9:30 pm <strong>Fri 01/11</strong>
+            </div>
+            <div class="teams-info">
+                <p>FC Admira Wacker Modling - SV Ried</p>
+                <small>2. Liga</small>
+                <p><strong>1X2 | Full Time (1)</strong></p>
+            </div>
+            </div>
 
-                    <input type="submit" value="Submit">
-                </form>
+            <div class="right-section">    
+            <div class="betting-details">
+                <span class="odd-value">3.07</span>
+                <div class="green-square"></div>
             </div>
-            <div id="div4" class="target">
-                <h2>Kendi Table Entry</h2>
-                <form action="https://formspree.io/f/xjkbqrja" method="POST">
-                    <label for="kendi-field1">Field 1:</label>
-                    <input type="text" id="kendi-field1" name="field1" required>
-                    <label for="kendi-field2">Field 2:</label>
-                    <input type="text" id="kendi-field2" name="field2" required>
-                    <input type="submit" value="Submit">
-                </form>
+            <p class="score">1-0</p>
             </div>
-            <div id="div5" class="target">
-                <h2>Hako Table Entry </h2>
-                <form action="https://formspree.io/f/xjkbqrja" method="POST">
-                    <label for="hako-field1">Field 1:</label>
-                    <input type="text" id="hako-field1" name="field1" required>
-                    <label for="hako-field2">Field 2:</label>
-                    <input type="text" id="hako-field2" name="field2" required>
-                    <input type="submit" value="Submit">
-                </form>
+        </div>
+        <!-- Bet Status Section -->
+        
+    
+        <div class="bet-status">
+           <p class="bet-date">Bet placed on Thu 02/11 at 9:23 am</p>
+           <div class="statuses">
+               <div class="status pending">   
+                   <span class="square"></span> Pending
+               </div>
+               <div class="status won">   
+                   <span class="square"></span> Won
+               </div>
+               <div class="status lost">   
+                   <span class="square"></span> Lost
+               </div>
+               <div class="status void">   
+                   <span class="square cross-sign">&times;</span> Void
+               </div>
             </div>
-            <div id="div6" class="target">
-                <h2>Janji Table Entry</h2>
-                <form action="https://formspree.io/f/xjkbqrja" method="POST">
-                    <label for="janji-field1">Field 1:</label>
-                    <input type="text" id="janji-field1" name="field1" required>
-                    <label for="janji-field2">Field 2:</label>
-                    <input type="text" id="janji-field2" name="field2" required>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </section>
-    </div>
+        </div>
 
-    <script src="script.js"></script>
+        <!-- Terms Section -->
+        <div class="terms-section">    
+            <p>All bets are accepted and settled in accordance with our <a href="#">Terms and Conditions</a> and <a href="#">Rules</a>.</p>
+        </div>
+        <div class="diviver"></div>
+
+        <!-- My Bets Button -->
+        <div class="my-bets">    
+        <button>MY BETS</button>
+        </div>
+   </main>
+   <footer class="footer">
+        <img src="footer.png" alt="Footer Image" class="footer-img">
+   </footer>
 </body>
 </html>
